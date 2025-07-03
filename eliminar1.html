@@ -1,0 +1,70 @@
+ 
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+      <meta charset="UTF-8">
+    <link rel="stylesheet" href="hoja.css">
+    <title>Pastelería Dulce Sabor</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        nav { background: #95dcf8; padding: 1em; }
+        nav a { color: #fff; margin: 0 1em; text-decoration: none; font-weight: bold; }
+        section { display: none; padding: 2em; }
+        section.active { display: block; }
+        h1, h2 { color: #7286f6; }
+        form label { display: block; margin-top: 1em; }
+        form input, form textarea, form select { width: 100%; padding: 0.5em; margin-top: 0.5em; }
+        form button { margin-top: 1em; background: #9572f6; color: #fff; border: none; padding: 0.7em 2em; cursor: pointer; }
+        .header-container{
+            display: flex;
+            align-items: center;
+            background:#95dcf8 ;
+            padding: 10px  20px;
+
+        }
+         .logo
+    {width: 80px;
+        height:auto;
+        margin-rigth:15px;
+
+    }
+    h1{
+        flex-grow: 1;
+        text-align: auto;
+        margin-right: 0;
+    }
+
+        
+    </style>
+    <div class="header-container">
+    <img src="logo.png" alt="logo1" class="logo">
+    <h1>PASTELERIA DE ADONAI CASI REPROBADO</h1>
+</div>
+
+</head>
+<body>
+ <form id="form1" name="form1" method="GET" action="eliminar1.php">
+            <p><label></label>&nbsp;<label><label></label> 
+                <label>
+                    nombre
+                    <input type="text" name="nombre" id="nombre"/>
+                </label> 
+            </p>
+            <p>
+              <input type="submit" name="borrar" id="borrar" value="borrar"/>  
+            </p>
+    </form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <footer style=" background: #95dcf8; padding: 1em; text-align: center;">
+        <p>© 2025 pasteleria de adonai casi reprobado.Todos los derechos reservados</p>
+    </footer>
+
+ </body>
+
+</html>       
