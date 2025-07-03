@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="hoja.css">
+    <title>Pastelería Dulce Sabor</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        nav { background: #95dcf8; padding: 1em; }
+        nav a { color: #fff; margin: 0 1em; text-decoration: none; font-weight: bold; }
+        section { display: none; padding: 2em; }
+        section.active { display: block; }
+        h1, h2 { color: #7286f6; }
+        form label { display: block; margin-top: 1em; }
+        form input, form textarea, form select { width: 100%; padding: 0.5em; margin-top: 0.5em; }
+        form button { margin-top: 1em; background: #9572f6; color: #fff; border: none; padding: 0.7em 2em; cursor: pointer; }
+        .header-container{
+            display: flex;
+            align-items: center;
+            background:#95dcf8 ;
+            padding: 10px  20px;
+
+        }
+         .logo
+    {width: 80px;
+        height:auto;
+        margin-rigth:15px;
+
+    }
+    h1{
+        flex-grow: 1;
+        text-align: auto;
+        margin-right: 0;
+    }
+
+        
+    </style>
+    <div class="header-container">
+    <img src="logo.png" alt="logo1" class="logo">
+    <h1>PASTELERIA DE ADONAI CASI REPROBADO</h1>
+</div>
+
+</head>
+<body>
+    
+
+
+
+
+
+    <nav>
+        <a href="#" onclick="mostrar('bienvenida')">Bienvenida</a>
+        <a href="#" onclick="mostrar('informacion')">Información de Pasteles</a>
+        <a href="#" onclick="mostrar('pedido')">Crear Pedido</a>
+         <a href="eliminar1.html" onclick="mostrar('Eliminar pedido')">Eliminar pedido</a>
+    </nav>
+
+    <section id="bienvenida" class="active">
+        <h1>¡Bienvenido a la pasteleria de la persona mas chingona(yo)!</h1>
+        <p>descubre mis pasteles mas deliciosos con tantito de lo que tiene los brownies,qlo si no compran</p>
+    </section>
+
+    <section id="informacion">
+        <h2>LOS PASTELES DE LA FELICIDAD SON:</h2>
+        <ul>
+            <li><strong>Pastel de Chocolate:</strong> Bizcocho húmedo con cobertura de chocolate belga.</li>
+            <li><strong>Pastel de Vainilla:</strong> Clásico y esponjoso, decorado con crema de mantequilla.</li>
+            <li><strong>Pastel de Zanahoria:</strong> Con nueces y glaseado de queso crema.</li>
+            <li><strong>Pastel de Fresa:</strong> Con crema batida y glaseado de nectar de miel.</li>
+       
+        </ul>
+    </section>
+
+    <section id="pedido">
+        <h2>HACER PEDIDOS</h2>
+        <form id="form1"name="form1" method="GET" action="insertar.php">
+            <label for="nombre">NOMBRE:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="pastel">TIPOS DE PASTELES MAGICOS:</label>
+            <select id="pastel" name="pastel" required>
+                <option value="">Seleccione...</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="vainilla">Vainilla</option>
+                <option value="zanahoria">Zanahoria</option>
+                <option value="fresa">Fresa</option>
+            </select>
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+            <label for="mensaje">Mensaje en el pastel (opcional):</label>
+            <input type="text" id="mensaje" name="mensaje">
+
+            <label for="dirección">Dirección de tu canton(pa pedrear tu casa):</label>
+            <textarea id="dirección" name="dirección" required></textarea>
+
+            <button type="submit">Enviar Pedido</button>
+        </form>
+
+       
+    </section>
+
+    <script>
+        function mostrar(seccion) {
+            document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+            document.getElementById(seccion).classList.add('active');
+        }
+    </script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <footer style=" background: #95dcf8; padding: 1em; text-align: center;">
+        <p>© 2025 pasteleria de adonai casi reprobado.Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
+
+
